@@ -1,21 +1,18 @@
 #include "main.h"
 
 /**
- * print_most_numbers - This function print numbers
- *
+ * print_line - This function print line based on the value passed
+ * @n:  How long the line is
  * return: nothing
  */
 
-void print_most_numbers(void)
+void print_line(int n)
 {
-	char i = 0;
+	int i = 0;
 
-	while (i <= 9)
+	while (i < n && n > 0)
 	{
-		if (i != 2 && i != 4)
-		{
-			_putchar('0' + i);
-		}
+		_putchar('_');
 		i++;
 	}
 	_putchar('\n');

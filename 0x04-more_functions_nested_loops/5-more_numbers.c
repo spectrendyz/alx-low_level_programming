@@ -1,22 +1,30 @@
 #include "main.h"
 
 /**
- * print_most_numbers - This function print numbers
+ * more_numbers - prints 10 times the numbers from 0 to 14
  *
- * return: nothing
+ * Return: void
  */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
-	char i = 0;
+	char n, c;
+	int i = 0;
 
-	while (i <= 9)
+	while (i < 10)
 	{
-		if (i != 2 && i != 4)
+		for (n = 0; n <= 14; n++)
 		{
-			_putchar('0' + i);
+			c = n;
+			if (n > 9)
+			{
+				_putchar('1');
+				c = n % 10;
+			}
+			_putchar('0' + c);
 		}
+
+		_putchar('\n');
 		i++;
 	}
-	_putchar('\n');
 }
